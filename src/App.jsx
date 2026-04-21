@@ -5,14 +5,14 @@ const SPREADSHEET_ID = "1uYgfcInCdh2qKAvxVlyFa9P1kzv2vWHPkdvRU5Shh4E";
 const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzhkMYrMVuQhsNr5MmT8Ak7ibFqWeyXqCc80oaPl5t4ecJDX85O9LcgjXfhohePM5nO4g/exec";
 
 const PHOTOS = [
-  { id: 1, title: "따뜻한 동행", description: "어르신의 손을 잡고 함께 걷는 사회복지사의 모습", emoji: "🤝" },
-  { id: 2, title: "작은 쉼터", description: "지역아동센터에서 웃음꽃 피우는 아이들", emoji: "🏠" },
-  { id: 3, title: "희망의 밥상", description: "독거어르신을 위한 도시락 배달 현장", emoji: "🍱" },
-  { id: 4, title: "함께 만드는 내일", description: "주민들과 마을계획을 수립하는 워크숍 현장", emoji: "📋" },
-  { id: 5, title: "첫 출발", description: "자립을 준비하는 청년의 새로운 시작", emoji: "🌱" },
-  { id: 6, title: "연결의 순간", description: "세대를 잇는 봉사활동 프로그램 현장", emoji: "🔗" },
-  { id: 7, title: "마음의 다리", description: "위기가정 긴급지원 상담 현장", emoji: "🌉" },
-  { id: 8, title: "모두의 축제", description: "지역사회 한마음 축제의 뜨거운 현장", emoji: "🎉" },
+  { id: 7, title: "함께라서 가능했던 도전", description: "서사협 동아리 지원으로 사자모가 2016년 8월 서울~해남 땅끝마을 라이딩 중 목적지인 땅끝마을 표지석 앞에서의 단체사진", image: "/photos/사진7.png" },
+  { id: 11, title: "뜨거웠던 그날", description: "2004년 서울복지재단 낙하산 인사 규탄대회", image: "/photos/사진11.png" },
+  { id: 13, title: "고된 순례의 여정에서도 더불어 살아가는", description: "서울시사회복지사협회 2023년 힐링캠프 사업의 지원을 받아 다녀온 '산티아고 순례길'의 여정 중, 우연히 마주친 필리핀 순례자에게 스틱 올바르게 사용하는 법을 영어, 한국말(?), 바디랭귀지를 섞어가며 열심히 설명하고 있는 손상현 사회복지사의 모습을 필름카메라로 담아보았습니다. 정말 고된 여정에서도 더불어 살아감을 잊지 않는 당시 그의 모습이 생생하게 기억납니다.", image: "/photos/사진13.png" },
+  { id: 27, title: "2025년 제주도 단체연수 기간 단체 사진", description: "촬영배경 : 제주도 단체연수 기간 중 자연 속 힐링 프로그램의 일환으로 해안가에서 촬영함. 바쁜 업무에서 벗어나 구성원 간 유대감 형성과 정서적 회복을 도모하는 과정에서 진행된 단체 기념사진임.\n촬영장소 : 제주 해안가(현무암 지형과 자연 수반이 형성된 해변 일대)\n촬영의미 : 단체연수를 통해 종사자 간 신뢰와 화합을 다지는 상징적인 장면\n자연 속에서 심리적 안정과 재충전을 경험하는 힐링의 순간 기록\n기관 구성원들이 함께 같은 방향을 바라보며 나아가는 공동체 의식 표현\n장애인복지 현장에서 노력하는 종사자들의 긍정적인 에너지와 사기 진작을 나타냄", image: "/photos/사진27.png" },
+  { id: 30, title: "함께라서 나아갈 수 있었던 2025 홍당모캠프", description: "2025년 여름, 홍당모 캠프에서 만난 2조의 포스터 입니다. 서로 모인 손이 만나 꽃(손 모양)이 피고, 열매(당근)을 맺은 모습입니다. \n20대~50대 사회복지사가 만나 홍보, 자원봉사, 후원 등 서로의 방향성, 고충을 나누며, '함께'라는 꽃이 피었고 '네트워크'라는 열매가 생겼습니다. \n캠프 이후, 서로의 기관에 후원물품 연계, 홍보활동 등을 통해 사후 만남도 진행했던 네트워크! 홍당모 캠프 덕분이라고 생각합니다~", image: "/photos/사진30.png" },
+  { id: 31, title: "변신은 무죄, 열정은 유죄! 코스튬에 진심인 '한국여성의집', 올해도 무대를 찢으러 왔다!", description: "박쥐에서 가오나시로, 아보카도에서 크리스마스트리로! 사진 속 의상은 달라졌지만, 사회복지사로서의 열정만은 변함없습니다. 서울시 사회복지사들의 축제에 진심을 다해 참여하며 쌓아온 '한국여성의집'만의 유쾌한 기록들을 한 장에 담았습니다. \n서사협의 역사와 함께 자라온 저희의 열정을 예쁘게 봐주세요!", image: "/photos/사진31.png" },
+  { id: 32, title: "보편적 복지서비스를 전면 시행하라 ~", description: "보편적복지서비스 전면 시행을 촉구하는 기자회견을 2012년 3월 30일 광화문 광장에서 진행 ~", image: "/photos/사진32.png" },
+  { id: 33, title: "그날.....난장(사회복지사 스트레스 해소를 위한 할로윈파티)", description: "서울시사회복지사협회 교육실및 사무실\n(너무 오래전이라 초상권 동의가 어렵습니다.개인 사진이 아니라 행사사진)", image: "/photos/사진33.png" },
 ];
 
 // 실제 사진 URL을 넣으려면 위 PHOTOS 배열에 image 필드를 추가하세요:
@@ -302,11 +302,12 @@ export default function App() {
   const [voteResults, setVoteResults] = useState(PHOTOS.map(p => ({ id: p.id, title: p.title, votes: 0 })));
   const [voters, setVoters] = useState([]);
   const [lightboxPhoto, setLightboxPhoto] = useState(null);
+  const [dupVoter, setDupVoter] = useState(null);
 
   // localStorage로 데이터 유지
   useEffect(() => {
     try {
-      const s = JSON.parse(localStorage.getItem("sasw-vote-data"));
+      const s = JSON.parse(localStorage.getItem("sasw-vote-data-final"));
       if (s) { setVoteResults(s.results || []); setVoters(s.voters || []); }
     } catch {}
   }, []);
@@ -318,7 +319,7 @@ export default function App() {
   }, []);
 
   const save = useCallback((r, v) => {
-    localStorage.setItem("sasw-vote-data", JSON.stringify({ results: r, voters: v }));
+    localStorage.setItem("sasw-vote-data-final", JSON.stringify({ results: r, voters: v }));
   }, []);
 
   const now = () => {
@@ -345,6 +346,12 @@ export default function App() {
       } catch {}
     }
     setTimeout(() => { setSubmitting(false); setScreen("complete"); }, 700);
+  };
+
+  const checkDuplicate = (n, p) => {
+    return voters.find(
+      v => v.name.trim() === n.trim() && v.phone.replace(/[-\s]/g, "") === p.replace(/[-\s]/g, "")
+    );
   };
 
   const totalVotes = voteResults.reduce((s, r) => s + r.votes, 0);
@@ -381,7 +388,12 @@ export default function App() {
         <Input label="성 함" placeholder="성함을 입력하세요" value={name} onChange={setName} />
         <Input label="연락처" placeholder="010-0000-0000" value={phone} onChange={setPhone} type="tel" />
         <div style={{ marginTop: 8 }}>
-          <MintButton onClick={() => { if (name.trim() && phone.trim()) setScreen("vote"); }} disabled={!name.trim() || !phone.trim()}>
+          <MintButton onClick={() => {
+            if (!name.trim() || !phone.trim()) return;
+            const dup = checkDuplicate(name, phone);
+            if (dup) { setDupVoter(dup); setScreen("duplicate"); }
+            else setScreen("vote");
+          }} disabled={!name.trim() || !phone.trim()}>
             투표 시작하기
           </MintButton>
         </div>
@@ -393,6 +405,41 @@ export default function App() {
         </span>
       </div>
     </>
+  );
+
+  /* ─── DUPLICATE ─── */
+  if (screen === "duplicate") return wrap(
+    <div style={{ textAlign: "center", padding: "64px 24px" }}>
+      <div style={{
+        width: 72, height: 72, borderRadius: "50%",
+        background: `linear-gradient(135deg, #f87171, #ef4444)`,
+        display: "flex", alignItems: "center", justifyContent: "center",
+        margin: "0 auto 24px", fontSize: 30, boxShadow: "0 8px 32px rgba(248,113,113,0.35)",
+      }}>✕</div>
+      <h2 style={{ fontSize: 24, fontWeight: 800, color: t.text, marginBottom: 10 }}>이미 투표하셨습니다</h2>
+      <p style={{ color: t.textSub, fontSize: 14, lineHeight: 1.8 }}>
+        <span style={{ color: t.text, fontWeight: 700 }}>{name}</span>님은<br />
+        이미 투표에 참여하셨습니다.
+      </p>
+      <Divider />
+      <div style={{
+        background: t.bgCard, borderRadius: 12, padding: 20,
+        border: `1px solid ${t.border}`, maxWidth: 300, margin: "0 auto 32px",
+      }}>
+        <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 12 }}>
+          <span style={{ fontSize: 12, color: t.textMuted }}>선택 작품</span>
+          <span style={{ fontSize: 14, color: t.mint, fontWeight: 700 }}>{dupVoter?.photoTitle}</span>
+        </div>
+        <div style={{ height: 1, background: t.border, marginBottom: 12 }} />
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <span style={{ fontSize: 12, color: t.textMuted }}>투표 시간</span>
+          <span style={{ fontSize: 13, color: t.textSub }}>{dupVoter?.time}</span>
+        </div>
+      </div>
+      <MintButton onClick={() => { setScreen("intro"); setName(""); setPhone(""); setDupVoter(null); }} style={{ maxWidth: 240, margin: "0 auto" }}>
+        확인
+      </MintButton>
+    </div>
   );
 
   /* ─── VOTE ─── */
