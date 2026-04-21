@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 
 /* ═══════════ CONFIG ═══════════ */
 const SPREADSHEET_ID = "1uYgfcInCdh2qKAvxVlyFa9P1kzv2vWHPkdvRU5Shh4E";
-const APPS_SCRIPT_URL = null; // Google Apps Script 웹앱 URL을 여기에 입력하세요
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzhkMYrMVuQhsNr5MmT8Ak7ibFqWeyXqCc80oaPl5t4ecJDX85O9LcgjXfhohePM5nO4g/exec";
 
 const PHOTOS = [
   { id: 1, title: "따뜻한 동행", description: "어르신의 손을 잡고 함께 걷는 사회복지사의 모습", emoji: "🤝" },
