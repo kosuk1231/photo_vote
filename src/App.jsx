@@ -295,6 +295,7 @@ export default function App() {
   const [screen, setScreen] = useState("intro");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
+  const [agreePrivacy, setAgreePrivacy] = useState(false);
   const [selectedPhoto, setSelectedPhoto] = useState(null);
   const [adminPw, setAdminPw] = useState("");
   const [adminErr, setAdminErr] = useState("");
@@ -387,13 +388,49 @@ export default function App() {
       <div style={{ padding: "0 24px 36px" }}>
         <Input label="성 함" placeholder="성함을 입력하세요" value={name} onChange={setName} />
         <Input label="연락처" placeholder="010-0000-0000" value={phone} onChange={setPhone} type="tel" />
+        
+        <div style={{ 
+          marginTop: 20, marginBottom: 20, padding: "16px", 
+          background: t.bgInput, border: `1px solid ${t.border}`, borderRadius: 8,
+          fontSize: 12, color: t.textSub, lineHeight: 1.6
+        }}>
+          <div style={{ color: t.text, fontWeight: "bold", marginBottom: 8, fontSize: 13 }}>[개인정보 수집·이용 동의]</div>
+          본 온라인투표 참여를 위해 아래와 같이 개인정보를 수집·이용합니다.<br/><br/>
+          - <span style={{ color: t.text }}>수집항목</span>: 이름, 연락처<br/>
+          - <span style={{ color: t.text }}>수집목적</span>: 투표 참여 확인 및 중복 방지<br/>
+          - <span style={{ color: t.text }}>보유기간</span>: <Mint>이벤트 종료 후 즉시 파기</Mint><br/><br/>
+          위 개인정보 수집·이용에 동의하지 않을 권리가 있으며, 동의하지 않으실 경우 투표 참여가 어려울 수 있습니다.
+        </div>
+
+        <label style={{ 
+          display: "flex", alignItems: "center", gap: 8, 
+          cursor: "pointer", marginBottom: 24, padding: "0 4px"
+        }}>
+          <div style={{
+            width: 20, height: 20, borderRadius: 4, 
+            border: `2px solid ${agreePrivacy ? t.mint : t.border}`,
+            background: agreePrivacy ? t.mint : "transparent",
+            display: "flex", alignItems: "center", justifyContent: "center",
+            transition: "all .2s", flexShrink: 0
+          }}>
+            {agreePrivacy && <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke={t.bgDeep} strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>}
+          </div>
+          <input 
+            type="checkbox" 
+            checked={agreePrivacy} 
+            onChange={(e) => setAgreePrivacy(e.target.checked)} 
+            style={{ display: "none" }} 
+          />
+          <span style={{ fontSize: 13, color: t.text, fontWeight: 500 }}>위 개인정보 수집·이용에 동의합니다. (필수)</span>
+        </label>
+
         <div style={{ marginTop: 8 }}>
           <MintButton onClick={() => {
-            if (!name.trim() || !phone.trim()) return;
+            if (!name.trim() || !phone.trim() || !agreePrivacy) return;
             const dup = checkDuplicate(name, phone);
             if (dup) { setDupVoter(dup); setScreen("duplicate"); }
             else setScreen("vote");
-          }} disabled={!name.trim() || !phone.trim()}>
+          }} disabled={!name.trim() || !phone.trim() || !agreePrivacy}>
             투표 시작하기
           </MintButton>
         </div>
